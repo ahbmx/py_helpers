@@ -1,3 +1,8 @@
+# Enhanced Sample Data Generator with Custom Date Ranges
+
+Here's an improved Python function that creates various types of sample DataFrames with customizable date ranges and frequencies:
+
+```python
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
@@ -236,3 +241,37 @@ if __name__ == "__main__":
     # Show available data types
     print("\nAvailable data types:")
     print("['sales', 'financial', 'web_traffic', 'ecommerce', 'timeseries', 'correlation', 'marketing']")
+```
+
+## Key Features:
+
+1. **Custom Date Ranges**: Specify start date, end date, and frequency (D, H, W, etc.)
+2. **Multiple Data Types**: 
+   - Sales data with products and regions
+   - Financial time series with realistic patterns
+   - Website traffic metrics
+   - E-commerce transactions with customer demographics
+   - Multiple time series with trend and seasonality
+   - Data with correlation for relationship analysis
+   - Marketing campaign performance metrics
+
+3. **Realistic Patterns**: Includes trends, seasonality, and realistic distributions
+4. **Flexible Size**: Control the number of records for non-time series data
+
+## Usage Examples:
+
+```python
+# Create daily sales data for Q1 2023
+sales_data = create_sample_data('sales', '2023-01-01', '2023-03-31', 'D')
+
+# Create hourly web traffic data for a week
+web_data = create_sample_data('web_traffic', '2023-06-01', '2023-06-07', 'H')
+
+# Create financial data for a year
+financial_data = create_sample_data('financial', '2022-01-01', '2022-12-31', 'D')
+
+# Create e-commerce data with 1000 records
+ecommerce_data = create_sample_data('ecommerce', size=1000)
+```
+
+This function will help you test various plotting functions with realistic and diverse data patterns.
